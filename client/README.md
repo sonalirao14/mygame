@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Memory Game Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+The Memory Game Web App is a fun and engaging memory board game where players match pairs of cards. After creating an account and signing in, users can choose their preferred difficulty level and card theme. The objective is to find all the matching pairs of cards. Your score will be updated after each game based on your performance.
 
-## Available Scripts
+## Screenshot
+![screenshot](https://live.staticflickr.com/65535/50996655401_49ed9fbc3e_n.jpg)
 
-In the project directory, you can run:
+## Tech Used
+- **Frontend:** HTML, CSS, MaterializeCSS, JavaScript, React
+- **Backend:** MongoDB, Express, Node, Mongoose
+- **State Management:** Context API
+- **Development Tools:** Nodemon, Concurrently
+- **Authentication & Security:** JWT, Bcrypt
+- **Card Images:** Robohash
+- **API Requests:** Axios
+- **Deployment:** Railway
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to Run Locally
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/memory-game-app.git
+   cd memory-game-app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install Backend Dependencies**
+   ```bash
+   cd server
+   npm install
 
-### `yarn eject`
+3. **Install Frontend Dependencies**
+cd ../client
+npm install
+ 
+4. **Set Up Environment Variables**
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+5. **Start the Development Servers**
+cd server
+npm start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In another terminal
+cd client
+npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+6. **Open Your Browser**
+ Navigate to http://localhost:3000 to access the web app.

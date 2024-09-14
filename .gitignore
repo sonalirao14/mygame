@@ -1,3 +1,3 @@
 # It used so that thousands of node modules do not get updated on github server
-# rather node is supported like in vs code on the platform.
+# rather node is supported like in vs code on the platform
 node_modules/
