@@ -36,7 +36,7 @@ const AuthState = (props) => {
 
     // declare response from backend, dispatch data to USER_LOADED
     try {
-      const res = await axios.get('/api/auth');
+      const res = await axios.get('https://memory-game-essk.onrender.com/api/auth');
 
       dispatch({
         type: USER_LOADED,
@@ -62,7 +62,7 @@ const AuthState = (props) => {
 
     // declare response from backend, post user data
     try {
-      const res = await axios.post('/api/users', formData, config);
+      const res = await axios.post('https://memory-game-essk.onrender.com/api/users', formData, config);
 
       // dispatch data to reducer
       dispatch({

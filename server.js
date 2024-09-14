@@ -1,6 +1,7 @@
 const express = require('express');
 const connectDB = require('./config/db');
 const path = require('path');
+const cors = require('cors');  // Import cors
 
 const app = express();
 
@@ -9,6 +10,12 @@ connectDB();
 
 // Middleware to read form-data
 app.use(express.json({ extended: false }));
+
+// Enable CORS
+app.use(cors({
+ origin: "https://memory-game-essk.onrender.com"
+}
+));
 
 // Define Routes here
 app.use('/api/auth', require('./routes/auth'));
@@ -21,7 +28,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 
   app.get('*', (req, res) =>
-    res.sendFile(path.resolve(__dirname, '/client', 'build', 'index.html'))
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')) // Fixed incorrect path separator
   );
 }
 
