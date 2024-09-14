@@ -23,7 +23,7 @@ router.get('/', auth, async (req, res) => {
 // @desc    Add user history
 // @access  Private
 router.post('/', auth, async (req, res) => {
-  // declare variables from request
+  // declare variables from request..
   const { gameLevel, numOfMoves } = req.body;
 
   // declare newGame model with request info

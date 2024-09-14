@@ -12,7 +12,7 @@ const User = require('../models/Users');
 // @access  Public
 router.post(
   '/',
-  // check name, email, and password valid
+  // check name, email, and password valid...
   [
     check('name', 'Please enter a name').not().isEmpty(),
     check('email', 'Please enter valid email').isEmail(),

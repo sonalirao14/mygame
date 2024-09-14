@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// Game schema for mongoDB Games database
+// Game schema for mongoDB Games database on MONGODB
 const GameSchema = mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,

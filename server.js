@@ -7,17 +7,17 @@ const app = express();
 // Connect DB
 connectDB();
 
-// Initialize middleware
+// Middleware to read form-data
 app.use(express.json({ extended: false }));
 
-// Define Routes
+// Define Routes here
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/users', require('./routes/users'));
 app.use('/api/history', require('./routes/history'));
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
-  // Set static folder
+  // Set static folder here
   app.use(express.static('client/build'));
 
   app.get('*', (req, res) =>
