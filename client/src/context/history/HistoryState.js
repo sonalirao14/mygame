@@ -26,7 +26,7 @@ const HistoryState = (props) => {
   const getGames = async () => {
     // declare response from backend, dispatch to reducer
     try {
-      const res = await axios.get('/api/history');
+      const res = await axios.get('https://memory-game-essk.onrender.com/api/history');
 
       dispatch({
         type: GET_GAMES,
@@ -50,7 +50,7 @@ const HistoryState = (props) => {
     };
 
     try {
-      const res = await axios.post('/api/history', newGame, config);
+      const res = await axios.post('https://memory-game-essk.onrender.com/api/history', newGame, config);
 
       dispatch({
         type: ADD_NEW_GAME,
