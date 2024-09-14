@@ -11,11 +11,15 @@ connectDB();
 // Middleware to read form-data
 app.use(express.json({ extended: false }));
 
-// Enable CORS
-app.use(cors({
- origin: "https://memory-game-essk.onrender.com"
-}
-));
+// CORS options for specific origin or wildcard (*)
+const corsOptions = {
+  origin: 'https://mygame-neon.vercel.app/', // Replace with your actual frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Headers your frontend will send
+};
+
+// Apply CORS middleware
+app.use(cors(corsOptions));
 
 // Define Routes here
 app.use('/api/auth', require('./routes/auth'));
@@ -24,11 +28,11 @@ app.use('/api/history', require('./routes/history'));
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
-  // Set static folder here
+  // Set static folder
   app.use(express.static('client/build'));
 
   app.get('*', (req, res) =>
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')) // Fixed incorrect path separator
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')) 
   );
 }
 
