@@ -38,10 +38,10 @@ const Navbar = () => {
   return (
     // materializeCSS navbar
     <nav>
-      <div className='nav-wrapper'>
+      <div className='nav-wrapper blue'>
         <a href='/' className='brand-logo left'>
           <i className='material-icons'>memory</i>
-          Memory
+          GameWeb
         </a>
         {/* check if user signed in or not */}
         <ul id='nav-mobile' className='right'>
