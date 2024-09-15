@@ -14,7 +14,7 @@ The Memory Game Web App is a fun and engaging memory board game where players ma
 - **Authentication & Security:** JWT, Bcrypt
 - **Card Images:** Robohash
 - **API Requests:** Axios
-- **Deployment:** Railway
+- **Deployment:** Render
 
 
 
